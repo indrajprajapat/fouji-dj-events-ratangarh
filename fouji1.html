@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fouji DJ Events Ratangarh</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+  html{scroll-behavior:smooth}
+  body{background:#060913;color:#f8fafc;overflow-x:hidden;line-height:1.5}
+  header{background:#0b1120;border-top:4px solid #FF9933;border-bottom:4px solid #138808;padding:12px 4%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(0,0,0,.8)}
+  .brand{display:flex;align-items:center;gap:14px}
+  .pole{width:4px;height:50px;background:#cbd5e1;border-radius:2px}
+  .flag{display:flex;width:66px;height:40px;position:relative}
+  .s{flex:1;height:100%;background:linear-gradient(180deg,#FF9933 33.3%,#FFF 33.3%,#FFF 66.6%,#138808 66.6%);animation:wf 2s ease-in-out infinite}
+  .s:nth-child(2){animation-delay:.15s}.s:nth-child(3){animation-delay:.3s}.s:nth-child(4){animation-delay:.45s}.s:nth-child(5){animation-delay:.6s}.s:nth-child(6){animation-delay:.75s}
+  .chk{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#000080;font-size:13px;font-weight:bold}
+  @keyframes wf{0%,100%{transform:translateY(0) skewY(0)}50%{transform:translateY(-3px) skewY(6deg)}}
+  .w-box{display:inline-flex;flex-wrap:wrap;justify-content:center}
+  .gl{display:inline-block;font-weight:900;font-size:1.5rem;color:#fde047;animation:lr 2.6s ease-in-out infinite}
+  .hl{display:inline-block;font-weight:900;font-size:2.1rem;background:linear-gradient(180deg,#FF9933 35%,#FFF 35%,#FFF 65%,#22c55e 65%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:lr 2.6s ease-in-out infinite}
+  @keyframes lr{0%,100%{transform:translateY(0)}25%{transform:translateY(-6px) skewY(-5deg)}75%{transform:translateY(4px) skewY(4deg)}}
+  nav a{color:#fff;text-decoration:none;margin-left:14px;font-weight:600;font-size:.92rem}
+  nav a:hover{color:#fde047}
+  .notice{background:linear-gradient(90deg,#b45309,#d97706,#b45309);color:#fff;text-align:center;padding:10px 15px;font-weight:bold;font-size:.95rem;border-bottom:2px solid #fde047}
+  .hero{position:relative;text-align:center;padding:65px 15px;border-bottom:4px solid #FF9933;background:radial-gradient(circle at 50% 20%,rgba(59,130,246,.28),#090d16 75%);overflow:hidden}
+  .bg-svg{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.42;pointer-events:none}
+  .hero-in{position:relative;z-index:2}
+  .btn{background:linear-gradient(90deg,#ea580c,#d97706);color:#fff;padding:10px 20px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block;margin-top:8px;font-size:.9rem}
+  .btn-sm{padding:6px 12px;font-size:.82rem;margin-top:4px}
+  .sec{padding:50px 5%;max-width:1150px;margin:auto;scroll-margin-top:75px}
+  .ttl{text-align:center;color:#fde047;font-size:1.8rem;margin-bottom:25px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:20px}
+  .card{background:#0f172a;padding:24px;border-radius:12px;border-top:4px solid #FF9933;border-bottom:4px solid #138808;border-left:1px solid #1e293b;border-right:1px solid #1e293b;display:flex;flex-direction:column;justify-content:space-between;text-align:center}
+  .tag{background:rgba(255,153,51,.2);border:1px solid #FF9933;color:#fdba74;padding:4px 14px;border-radius:15px;font-weight:bold;display:inline-block;margin:8px 0 12px;font-size:.85rem}
+  .g-item{background:#0f172a;border-radius:10px;overflow:hidden;border:2px solid #1e293b;text-align:center}
+  .g-item svg,.g-item img,.g-item video{width:100%;height:190px;display:block;object-fit:cover}
+  .g-cap{padding:9px;background:#1e293b;color:#fde047;font-weight:bold;font-size:.9rem}
+  .panel{background:#0f172a;padding:20px;border-radius:12px;border:1px solid #334155;margin-bottom:22px}
+  .panel h3{color:#38bdf8;margin-bottom:10px;font-size:1.1rem}
+  .din{width:100%;padding:9px;margin:5px 0 10px;background:#1e293b;border:1px solid #475569;color:#fff;border-radius:6px;font-size:.92rem}
+  .scard{background:#0f172a;padding:16px;border-radius:10px;border-left:4px solid #22c55e;border-right:1px solid #FF9933;margin-bottom:12px}
+  audio{width:100%;height:38px;margin-top:8px}
+  .rcard{background:#0f172a;padding:18px;border-radius:10px;border:1px solid #334155;margin-bottom:14px}
+  .lbtn{background:#1e293b;color:#f8fafc;border:1px solid #475569;padding:5px 12px;border-radius:20px;cursor:pointer;font-size:.85rem;margin-right:8px}
+  .clist{margin-top:8px;padding-left:10px;border-left:2px solid #475569;font-size:.85rem;color:#cbd5e1}
+  .cnt{background:#0f172a;padding:32px;border-radius:12px;text-align:center;border-left:6px solid #FF9933;border-right:6px solid #138808}
+  .cnt p{margin:8px 0;font-size:1.05rem}.cnt b{color:#fde047}
+  .ins{display:inline-block;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff;padding:7px 14px;border-radius:20px;text-decoration:none;margin:4px;font-size:.85rem;font-weight:bold}
+  footer{background:linear-gradient(90deg,#ea580c,#0b1120,#15803d);text-align:center;padding:22px;margin-top:35px}
+  .mdl{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);justify-content:center;align-items:center;padding:12px;z-index:999}
+  .box{background:#fff;color:#0f172a;padding:20px;border-radius:12px;width:100%;max-width:540px;max-height:88vh;overflow-y:auto}
+  .box label{display:block;font-weight:bold;font-size:.85rem;margin-top:8px}
+  .box textarea{width:100%;padding:8px;margin:4px 0 8px;border:1px solid #94a3b8;border-radius:5px;font-size:.92rem}
+  .tbar{display:flex;gap:6px;margin-bottom:14px;border-bottom:2px solid #e2e8f0;padding-bottom:8px;flex-wrap:wrap}
+  .tbtn{background:#e2e8f0;color:#0f172a;border:none;padding:7px 12px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:.85rem}
+  .tbtn.act{background:#0f172a;color:#fde047}
+  .pitem{background:#f8fafc;border:1px solid #cbd5e1;padding:10px;border-radius:8px;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="pole"></div>
+    <div class="flag"><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div><span class="chk">☸</span></div>
+    <div class="w-box" id="lw">FOUJI DJ EVENTS</div>
+  </div>
+  <nav>
+    <a href="#packages">Packages</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#songs">DJ Songs</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="notice" id="notice-txt">📢 Fouji DJ Events Ratangarh: शादी और इवेंट्स की एडवांस बुकिंग के लिए संपर्क करें! विशेष पैकेज पर आकर्षक छूट उपलब्ध।</div>
+
+<div class="hero">
+  <svg class="bg-svg" viewBox="0 0 1200 360" preserveAspectRatio="none">
+    <rect x="80" y="15" width="1040" height="16" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <polygon points="220,31 40,360 400,360" fill="#FF9933" opacity=".4"/>
+    <polygon points="600,31 380,360 820,360" fill="#3b82f6" opacity=".4"/>
+    <polygon points="980,31 800,360 1160,360" fill="#22c55e" opacity=".4"/>
+    <rect x="50" y="110" width="85" height="220" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+    <circle cx="92" cy="160" r="26" fill="#090d16" stroke="#FF9933" stroke-width="3"/>
+    <circle cx="92" cy="230" r="26" fill="#090d16" stroke="#FF9933" stroke-width="3"/>
+    <circle cx="92" cy="295" r="28" fill="#090d16" stroke="#22c55e" stroke-width="3"/>
+    <rect x="1065" y="110" width="85" height="220" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+    <circle cx="1107" cy="160" r="26" fill="#090d16" stroke="#FF9933" stroke-width="3"/>
+    <circle cx="1107" cy="230" r="26" fill="#090d16" stroke="#FF9933" stroke-width="3"/>
+    <circle cx="1107" cy="295" r="28" fill="#090d16" stroke="#22c55e" stroke-width="3"/>
+  </svg>
+  <div class="hero-in">
+    <h1 class="w-box" id="hw">FOUJI DJ EVENTS RATANGARH</h1>
+    <p style="margin-top:12px;color:#e2e8f0">शादी, पार्टी और हर खास मौके के लिए प्रोफेशनल साउंड, ट्रस सेटअप और LED डांस फ्लोर बुकिंग।</p>
+    <a href="#packages" class="btn">पैकेज देखें</a>
+  </div>
+</div>
+
+<div class="sec" id="packages">
+  <h2 class="ttl">डांस फ्लोर और DJ पैकेज</h2>
+  <div class="grid">
+    <!-- Package 1: Basic -->
+    <div class="card">
+      <div>
+        <h3 id="p1-n">Normal U Truss</h3>
+        <div class="tag" id="p1-r">Basic</div>
+        <p id="p1-d">Single Side Truss, टॉप स्पीकर, बेस स्पीकर, डांस फ्लोर, बेसिक लाइटिंग और प्रोफेशनल ऑपरेटर।</p>
+      </div>
+      <div>
+        <button type="button" class="btn" style="background:#2563eb;width:100%;margin-bottom:6px" onclick="openPkgDetails('p1')">📸 More Details (Photo/Video)</button>
+        <button type="button" class="btn" style="width:100%" onclick="wa('p1')">WhatsApp बुकिंग</button>
+      </div>
+    </div>
+
+    <!-- Package 2: Premium -->
+    <div class="card">
+      <div>
+        <h3 id="p2-n">Four Side Normal</h3>
+        <div class="tag" id="p2-r">Premium</div>
+        <p id="p2-d">Four Side Truss, डांस फ्लोर, टॉप स्पीकर, बेस स्पीकर, साउंड सिस्टम और शार्पी लाइट्स सेटअप।</p>
+      </div>
+      <div>
+        <button type="button" class="btn" style="background:#2563eb;width:100%;margin-bottom:6px" onclick="openPkgDetails('p2')">📸 More Details (Photo/Video)</button>
+        <button type="button" class="btn" style="width:100%" onclick="wa('p2')">WhatsApp बुकिंग</button>
+      </div>
+    </div>
+
+    <!-- Package 3: Royal Wedding -->
+    <div class="card">
+      <div>
+        <h3 id="p3-n">Four Side Truss</h3>
+        <div class="tag" id="p3-r">Royal Wedding</div>
+        <p id="p3-d">बड़ा डांस फ्लोर, लाइन अरे साउंड, LED Wall, ट्रस लाइटिंग, कोल्ड पायरो, CO2 Jet, Paper Machine।</p>
+      </div>
+      <div>
+        <button type="button" class="btn" style="background:#2563eb;width:100%;margin-bottom:6px" onclick="openPkgDetails('p3')">📸 More Details (Photo/Video)</button>
+        <button type="button" class="btn" style="width:100%" onclick="wa('p3')">WhatsApp बुकिंग</button>
+      </div>
+    </div>
+
+    <!-- Package 4: Pickup DJ -->
+    <div class="card">
+      <div>
+        <h3 id="p4-n">Pickup DJ</h3>
+        <div class="tag" id="p4-r">Road Show & Barat</div>
+        <p id="p4-d">बारात, जुलूस और शोभायात्रा के लिए हैवी बेस, टॉप स्पीकर, जनरेटर, पावरफुल लाइटिंग और फुल Pickup DJ सेटअप।</p>
+      </div>
+      <div>
+        <button type="button" class="btn" style="background:#2563eb;width:100%;margin-bottom:6px" onclick="openPkgDetails('p4')">📸 More Details (Photo/Video)</button>
+        <button type="button" class="btn" style="width:100%" onclick="wa('p4')">WhatsApp बुकिंग</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Package More Details Modal (Shows Photos & Videos of Selected Package) -->
+<div class="mdl" id="pkg-modal">
+  <div class="box" style="max-width:650px">
+    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e2e8f0;padding-bottom:8px;margin-bottom:12px">
+      <h3 id="pm-title" style="color:#0f172a">Package Details</h3>
+      <button type="button" class="btn btn-sm" style="background:#dc2626;margin-top:0" onclick="document.getElementById('pkg-modal').style.display='none'">✖ बंद करें</button>
+    </div>
+    <p id="pm-desc" style="color:#334155;margin-bottom:15px;font-size:.95rem"></p>
+    <h4 style="color:#0f172a;margin-bottom:10px">📸 इस पैकेज के सेटअप की फोटो और वीडियो:</h4>
+    <div class="grid" id="pm-gallery" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"></div>
+    <div style="text-align:center;margin-top:15px">
+      <button type="button" class="btn" id="pm-book-btn" style="width:100%">WhatsApp पर इस पैकेज की बुकिंग करें</button>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="gallery">
+  <h2 class="ttl">📸 DJ सेटअप और कस्टमर इवेंट एल्बम (Albums)</h2>
+  
+  <div class="panel">
+    <h3>ग्राहक फोटो / वीडियो अपलोड (Admin Approval के बाद पोस्ट होगा)</h3>
+    <textarea id="cm-name" class="din" rows="1" placeholder="आपका नाम लिखें"></textarea>
+    <select id="cm-album" class="din">
+      <option value="Wedding Events">📂 Album: Wedding Events</option>
+      <option value="LED Dance Floor">📂 Album: LED Dance Floor</option>
+      <option value="Truss & Sound">📂 Album: Truss & Sound</option>
+    </select>
+    <div style="margin:8px 0;background:#1e293b;padding:10px;border-radius:6px;border:1px dashed #22c55e">
+      <label style="font-size:.85rem;color:#86efac;display:block;margin-bottom:5px">नीचे से Photo या Video फाइल चुनें:</label>
+      <input type="file" id="cm-file" accept="image/*,video/*" style="color:#fff;width:100%">
+    </div>
+    <button type="button" class="btn" style="background:#16a34a" onclick="var inp=document.getElementById('cm-file');if(!inp||!inp.files||inp.files.length===0){alert('कृपया पहले Choose File दबाकर कोई Photo या Video चुनें!');}else{var fl=inp.files.item(0);var cn=document.getElementById('cm-name').value.trim()||'Customer';var al=document.getElementById('cm-album').value;window.pMedia=window.pMedia||[];window.pMedia.push({n:cn,a:al,u:URL.createObjectURL(fl),v:fl.type.indexOf('video')===0});var c=document.getElementById('pcnt');if(c)c.innerText=window.pMedia.length+(window.pSongs?window.pSongs.length:0);document.getElementById('cm-msg').innerText='✅ '+al+' एल्बम के लिए भेज दिया गया! Admin Approval के बाद दिखेगा।';document.getElementById('cm-name').value='';inp.value='';}">📤 Admin Approval के लिए भेजें</button>
+    <span id="cm-msg" style="margin-left:10px;color:#fde047;font-weight:bold;font-size:.9rem"></span>
+  </div>
+
+  <!-- Album Filter Buttons -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:20px">
+    <button type="button" class="btn btn-sm" style="background:#FF9933;color:#0f172a" onclick="filterAlbum('All')">All Albums</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterAlbum('Wedding Events')">Wedding Events</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterAlbum('LED Dance Floor')">LED Dance Floor</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterAlbum('Truss & Sound')">Truss & Sound</button>
+  </div>
+
+  <div class="grid" id="gal">
+    <div class="g-item" data-album="Truss & Sound"><svg viewBox="0 0 400 200"><rect x="30" y="20" width="340" height="160" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="3"/><circle cx="110" cy="100" r="45" fill="#090d16" stroke="#FF9933" stroke-width="4"/><circle cx="290" cy="100" r="45" fill="#090d16" stroke="#22c55e" stroke-width="4"/><rect x="185" y="45" width="8" height="110" fill="#fde047"/><rect x="207" y="45" width="8" height="110" fill="#38bdf8"/></svg><div class="g-cap">Pro DJ Mixer [Truss & Sound]</div></div>
+    <div class="g-item" data-album="Wedding Events"><svg viewBox="0 0 400 200"><rect x="40" y="20" width="320" height="14" fill="none" stroke="#cbd5e1" stroke-width="3"/><line x1="50" y1="34" x2="50" y2="190" stroke="#94a3b8" stroke-width="4"/><line x1="350" y1="34" x2="350" y2="190" stroke="#94a3b8" stroke-width="4"/><polygon points="100,34 30,190 170,190" fill="#FF9933" opacity=".45"/><polygon points="200,34 120,190 280,190" fill="#ec4899" opacity=".45"/><polygon points="300,34 230,190 370,190" fill="#22c55e" opacity=".45"/></svg><div class="g-cap">Four Side Truss [Wedding Events]</div></div>
+    <div class="g-item" data-album="LED Dance Floor"><svg viewBox="0 0 400 200"><polygon points="80,60 320,60 380,180 20,180" fill="#1e293b" stroke="#fde047" stroke-width="3"/><line x1="140" y1="60" x2="110" y2="180" stroke="#FF9933" stroke-width="2"/><line x1="200" y1="60" x2="200" y2="180" stroke="#38bdf8" stroke-width="2"/><line x1="260" y1="60" x2="290" y2="180" stroke="#22c55e" stroke-width="2"/><line x1="50" y1="120" x2="350" y2="120" stroke="#ec4899" stroke-width="2"/></svg><div class="g-cap">LED Dance Floor [LED Dance Floor]</div></div>
+  </div>
+</div>
+    <button type="button" class="btn" style="background:#16a34a" onclick="var inp=document.getElementById('cm-file');if(!inp||!inp.files||inp.files.length===0){alert('कृपया पहले Choose File दबाकर कोई Photo या Video चुनें!');}else{var fl=inp.files.item(0);var cn=document.getElementById('cm-name').value.trim()||'Customer';window.pMedia=window.pMedia||[];window.pMedia.push({n:cn,u:URL.createObjectURL(fl),v:fl.type.indexOf('video')===0});var c=document.getElementById('pcnt');if(c)c.innerText=window.pMedia.length+(window.pSongs?window.pSongs.length:0);document.getElementById('cm-msg').innerText='✅ भेज दिया गया! अब नीचे Admin Dashboard में जाकर Accept करें।';document.getElementById('cm-name').value='';inp.value='';}">📤 Admin Approval के लिए भेजें</button>
+    <span id="cm-msg" style="margin-left:10px;color:#fde047;font-weight:bold;font-size:.9rem"></span>
+  </div>
+
+
+  <div class="grid" id="gal">
+  <div class="grid" id="gal">
+    <div class="g-item"><svg viewBox="0 0 400 200"><rect x="30" y="20" width="340" height="160" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="3"/><circle cx="110" cy="100" r="45" fill="#090d16" stroke="#FF9933" stroke-width="4"/><circle cx="290" cy="100" r="45" fill="#090d16" stroke="#22c55e" stroke-width="4"/><rect x="185" y="45" width="8" height="110" fill="#fde047"/><rect x="207" y="45" width="8" height="110" fill="#38bdf8"/></svg><div class="g-cap">Pro DJ Mixer Console</div></div>
+    <div class="g-item"><svg viewBox="0 0 400 200"><rect x="40" y="20" width="320" height="14" fill="none" stroke="#cbd5e1" stroke-width="3"/><line x1="50" y1="34" x2="50" y2="190" stroke="#94a3b8" stroke-width="4"/><line x1="350" y1="34" x2="350" y2="190" stroke="#94a3b8" stroke-width="4"/><polygon points="100,34 30,190 170,190" fill="#FF9933" opacity=".45"/><polygon points="200,34 120,190 280,190" fill="#ec4899" opacity=".45"/><polygon points="300,34 230,190 370,190" fill="#22c55e" opacity=".45"/></svg><div class="g-cap">Four Side Truss & Sharpy Lights</div></div>
+    <div class="g-item"><svg viewBox="0 0 400 200"><rect x="70" y="20" width="110" height="160" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/><circle cx="125" cy="65" r="25" fill="#090d16" stroke="#FF9933" stroke-width="3"/><circle cx="125" cy="135" r="32" fill="#090d16" stroke="#FF9933" stroke-width="3"/><rect x="220" y="20" width="110" height="160" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="2"/><circle cx="275" cy="65" r="25" fill="#090d16" stroke="#22c55e" stroke-width="3"/><circle cx="275" cy="135" r="32" fill="#090d16" stroke="#22c55e" stroke-width="3"/></svg><div class="g-cap">Heavy Top & Bass Speakers</div></div>
+  </div>
+</div>
+
+<div class="sec" id="songs">
+  <h2 class="ttl">🎵 Fouji DJ Songs & Playlists</h2>
+  
+  <div class="panel">
+    <h3>🎧 DJ Remixer गाना अपलोड करें (Admin Approval के बाद प्लेलिस्ट में जुड़ेगा)</h3>
+    <textarea id="s-ttl" class="din" rows="1" placeholder="गाने का नाम (Song Title)"></textarea>
+    <textarea id="s-rmx" class="din" rows="1" placeholder="Remixer का नाम"></textarea>
+    <select id="s-plist" class="din">
+      <option value="Rajasthani DJ Mix">🎶 Playlist: Rajasthani DJ Mix</option>
+      <option value="Bollywood Remix">🎶 Playlist: Bollywood Remix</option>
+      <option value="Bass Boosted">🎶 Playlist: Bass Boosted</option>
+    </select>
+    <div style="margin:8px 0;background:#1e293b;padding:10px;border-radius:6px;border:1px dashed #38bdf8">
+      <label style="font-size:.85rem;color:#7dd3fc;display:block;margin-bottom:5px">नीचे से MP3 / Audio गाना चुनें:</label>
+      <input type="file" id="s-file" accept="audio/*" style="color:#fff;width:100%">
+    </div>
+    <button type="button" class="btn" style="background:#2563eb" onclick="var st=document.getElementById('s-ttl').value.trim();var rm=document.getElementById('s-rmx').value.trim();var pl=document.getElementById('s-plist').value;var inp=document.getElementById('s-file');if(!st||!rm){alert('कृपया गाने का नाम और Remixer का नाम दोनों लिखें!');}else if(!inp||!inp.files||inp.files.length===0){alert('कृपया पहले Choose File दबाकर कोई MP3 गाना चुनें!');}else{var fl=inp.files.item(0);window.pSongs=window.pSongs||[];window.pSongs.push({t:st,r:rm,p:pl,u:URL.createObjectURL(fl)});var c=document.getElementById('pcnt');if(c)c.innerText=(window.pMedia?window.pMedia.length:0)+window.pSongs.length;document.getElementById('s-msg').innerText='✅ गाना ('+pl+') Approval के लिए भेज दिया गया!';document.getElementById('s-ttl').value='';document.getElementById('s-rmx').value='';inp.value='';}">🎵 गाना Approval के लिए भेजें</button>
+    <span id="s-msg" style="margin-left:10px;color:#fde047;font-weight:bold;font-size:.9rem"></span>
+  </div>
+
+  <!-- Playlist Filter Buttons -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:20px">
+    <button type="button" class="btn btn-sm" style="background:#22c55e;color:#0f172a" onclick="filterPlaylist('All')">All Playlists</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterPlaylist('Rajasthani DJ Mix')">Rajasthani DJ Mix</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterPlaylist('Bollywood Remix')">Bollywood Remix</button>
+    <button type="button" class="btn btn-sm" style="background:#1e293b" onclick="filterPlaylist('Bass Boosted')">Bass Boosted</button>
+  </div>
+
+  <div id="song-list">
+    <div class="scard" data-playlist="Rajasthani DJ Mix">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <div>
+          <strong style="color:#fde047;font-size:1.05rem">🔥 Rajasthani Royal Wedding Mix 2026</strong>
+          <p style="font-size:.85rem;color:#94a3b8">Remixer: Fouji DJ Ratangarh | Playlist: <b style="color:#38bdf8">Rajasthani DJ Mix</b></p>
+        </div>
+        <a href="https://soundhelix.com" download="Rajasthani_Royal_Wedding_Mix_2026.mp3" target="_blank" class="btn btn-sm" style="background:#16a34a;margin-top:0">⬇️ Download MP3</a>
+      </div>
+      <audio controls src="https://soundhelix.com"></audio>
+    </div>
+  </div>
+</div>
+
+
+<div class="sec" id="reviews">
+  <h2 class="ttl">⭐ ग्राहक रेटिंग और रिव्यू (Like & Comment)</h2>
+  <div class="panel">
+    <h3>✍️ अपना रिव्यू और रेटिंग दें</h3>
+    <textarea id="r-name" class="din" rows="1" placeholder="आपका नाम"></textarea>
+    <select id="r-star" class="din">
+      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ (5 Star)</option>
+      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ (4 Star)</option>
+      <option value="⭐⭐⭐">⭐⭐⭐ (3 Star)</option>
+      <option value="⭐⭐">⭐⭐ (2 Star)</option>
+      <option value="⭐">⭐ (1 Star)</option>
+    </select>
+    <textarea id="r-txt" class="din" rows="2" placeholder="अपना अनुभव लिखें..."></textarea>
+    <button type="button" class="btn" onclick="addRev()">रिव्यू पोस्ट करें</button>
+  </div>
+  <div id="rev-list">
+    <div class="rcard">
+      <div style="display:flex;justify-content:space-between"><strong style="color:#fde047">Vikram Singh (Ratangarh)</strong><span style="color:#facc15">⭐⭐⭐⭐⭐</span></div>
+      <p style="margin-top:6px;color:#e2e8f0">शादी में Four Side Truss और LED डांस फ्लोर का सेटअप बहुत ही जबरदस्त था। साउंड क्वालिटी नंबर 1 है!</p>
+      <div style="margin-top:10px">
+        <button type="button" class="lbtn" onclick="var s=this.querySelector('span');s.innerText=parseInt(s.innerText)+1">❤️ Like (<span>14</span>)</button>
+        <button type="button" class="lbtn" onclick="addCmt(this)">💬 Comment</button>
+      </div>
+      <div class="clist"><div style="margin-top:6px"><b>Fouji DJ Events:</b> धन्यवाद विक्रम जी!</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="contact">
+  <div class="cnt">
+    <h2 class="ttl" style="margin-bottom:15px">बुकिंग और संपर्क</h2>
+    <p><b>कॉलिंग नंबर:</b> <span id="c-call">7023370739, 9119276526, 7725930617, 9001181847</span></p>
+    <p><b>व्हाट्सएप नंबर:</b> <span id="c-wa">9001181847</span></p>
+    <p><b>ईमेल:</b> <span id="c-mail">Foujidjeventsratangarh@gmail.com</span></p>
+    <p><b>पता:</b> <span id="c-addr">Fouji DJ Ratangarh, Churu, Rajasthan</span></p>
+    <div style="margin:18px 0" id="ibox">
+      <a class="ins" href="https://instagram.com" target="_blank">📸 @fouji_dj_events_ratangarh</a>
+      <a class="ins" href="https://instagram.com_" target="_blank">📸 @fouji_dj_ratangarh_</a>
+      <a class="ins" href="https://instagram.com" target="_blank">📸 @fouji_floor_dj_ratangarh</a>
+    </div>
+    <a id="cbtn" href="tel:+917023370739" class="btn" style="background:#16a34a;margin-right:8px">अभी कॉल करें (7023370739)</a>
+    <button type="button" class="btn" onclick="wa('gen')">WhatsApp चैट</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Fouji DJ Events Ratangarh. All Rights Reserved.</p>
+  <button type="button" style="margin-top:12px;background:#fde047;color:#0f172a;border:none;padding:9px 20px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:1rem" onclick="document.getElementById('login-box').style.display='flex'">🔐 Admin Dashboard Login</button>
+</footer>
+
+<div class="mdl" id="login-box">
+  <div class="box" style="max-width:360px;text-align:center">
+    <h3 style="margin-bottom:12px">Admin Login</h3>
+    
+    <label style="text-align:left">Admin ID:</label>
+    <textarea id="uid" rows="1">admin</textarea>
+    
+    <label style="text-align:left">Password:</label>
+    <div style="position:relative">
+      <textarea id="upw" rows="1" style="-webkit-text-security:disc;padding-right:38px">fouji123</textarea>
+      <span onclick="var p=document.getElementById('upw');p.style.webkitTextSecurity=p.style.webkitTextSecurity==='none'?'disc':'none';" style="position:absolute;right:10px;top:10px;cursor:pointer">👁️</span>
+    </div>
+
+    <div style="text-align:right;margin-bottom:8px">
+      <span style="color:#ea580c;font-size:.85rem;font-weight:bold;cursor:pointer;text-decoration:underline" onclick="document.getElementById('login-box').style.display='none';document.getElementById('fgt-box').style.display='flex';">Forgot ID / Password?</span>
+    </div>
+
+    <p id="lerr" style="color:#dc2626;font-size:.85rem;display:none;margin:6px 0">गलत ID या Password!</p>
+    
+    <button type="button" class="btn" onclick="openAdminNow()">लॉगिन करें</button>
+    <button type="button" class="btn" style="background:#64748b;margin-left:8px" onclick="document.getElementById('login-box').style.display='none'">बंद करें</button>
+  </div>
+</div>
+
+<script>
+function openAdminNow() {
+  var u = document.getElementById('uid').value.trim();
+  var p = document.getElementById('upw').value.trim();
+  var savedU = localStorage.getItem('f_aid') || 'admin';
+  var savedP = localStorage.getItem('f_apw') || 'fouji123';
+  
+  if ((u === 'admin' && p === 'fouji123') || (u === savedU && p === savedP)) {
+    document.getElementById('lerr').style.display = 'none';
+    document.getElementById('login-box').style.display = 'none';
+    document.getElementById('adm').style.display = 'flex';
+    if (typeof renderPend === 'function') { renderPend(); }
+  } else {
+    document.getElementById('lerr').style.display = 'block';
+  }
+}
+</script>
+<div class="mdl" id="fgt-box">
+  <div class="box" style="max-width:390px">
+    <h3>🔒 ID / Password Recovery</h3>
+    <label>Registered Email (Not Editable):</label><textarea rows="1" readonly style="background:#e2e8f0;font-weight:bold">indrajprajapat@gmail.com</textarea>
+    <label>Registered Mobile (Not Editable):</label><textarea rows="1" readonly style="background:#e2e8f0;font-weight:bold">9001181847</textarea>
+    <button type="button" class="btn" style="width:100%" onclick="sendOtp()">📩 दोनों पर एक ही कोड भेजें</button>
+    <div id="otp-div" style="display:none;margin-top:10px">
+      <p id="otp-show" style="color:#15803d;font-weight:bold;font-size:.9rem"></p>
+      <div style="display:flex;gap:6px;margin:6px 0">
+        <a id="m-btn" href="#" target="_blank" class="btn btn-sm" style="background:#2563eb;flex:1;text-align:center">📧 Gmail</a>
+        <a id="w-btn" href="#" target="_blank" class="btn btn-sm" style="background:#16a34a;flex:1;text-align:center">💬 WhatsApp</a>
+      </div>
+      <label>6-अंकों का कोड:</label><textarea id="in-otp" rows="1"></textarea>
+      <label>नया Admin ID:</label><textarea id="n-id" rows="1"></textarea>
+      <label>नया Password:</label><textarea id="n-pw" rows="1"></textarea>
+      <button type="button" class="btn" style="width:100%" onclick="resetCred()">✅ सेव करें</button>
+    </div>
+    <button type="button" class="btn" style="background:#64748b;width:100%;margin-top:8px" onclick="document.getElementById('fgt-box').style.display='none'">बंद करें</button>
+  </div>
+</div>
+
+<div class="mdl" id="login-box">
+  <div class="box" style="max-width:360px;text-align:center">
+    <h3 style="margin-bottom:12px">Admin Login</h3>
+    <label style="text-align:left">Admin ID:</label><textarea id="uid" rows="1" placeholder="admin"></textarea>
+    <label style="text-align:left">Password:</label>
+    <div style="position:relative">
+      <textarea id="upw" rows="1" style="-webkit-text-security:disc;padding-right:38px" placeholder="fouji123"></textarea>
+      <span onclick="var p=document.getElementById('upw');p.style.webkitTextSecurity=p.style.webkitTextSecurity==='none'?'disc':'none';" style="position:absolute;right:10px;top:10px;cursor:pointer">👁️</span>
+    </div>
+    <div style="text-align:right;margin-bottom:8px"><span style="color:#ea580c;font-size:.85rem;font-weight:bold;cursor:pointer;text-decoration:underline" onclick="document.getElementById('login-box').style.display='none';document.getElementById('fgt-box').style.display='flex';">Forgot ID / Password?</span></div>
+    <p id="lerr" style="color:#dc2626;font-size:.85rem;display:none;margin:6px 0">गलत ID या Password!</p>
+    
+    <!-- Direct Inline Login Check -->
+    <button type="button" class="btn" onclick="var sid=localStorage.getItem('f_aid')||'admin';var spw=localStorage.getItem('f_apw')||'fouji123';if(document.getElementById('uid').value.trim()===sid && document.getElementById('upw').value.trim()===spw){document.getElementById('lerr').style.display='none';document.getElementById('login-box').style.display='none';document.getElementById('adm').style.display='flex';if(typeof renderPend==='function')renderPend();}else{document.getElementById('lerr').style.display='block';}">लॉगिन करें</button>
+    <button type="button" class="btn" style="background:#64748b;margin-left:8px" onclick="document.getElementById('login-box').style.display='none'">बंद करें</button>
+  </div>
+</div>
+
+<div class="mdl" id="fgt-box">
+  <div class="box" style="max-width:390px">
+    <h3>🔒 ID / Password Recovery</h3>
+    <label>Registered Email (Not Editable):</label><textarea rows="1" readonly style="background:#e2e8f0;font-weight:bold">indrajprajapat@gmail.com</textarea>
+    <label>Registered Mobile (Not Editable):</label><textarea rows="1" readonly style="background:#e2e8f0;font-weight:bold">9001181847</textarea>
+    <button type="button" class="btn" style="width:100%" onclick="window.otpCode=Math.floor(100000+Math.random()*900000).toString();var m='Fouji DJ Reset Code: '+window.otpCode;document.getElementById('otp-div').style.display='block';document.getElementById('otp-show').innerText='कोड जनरेट हुआ: '+window.otpCode;document.getElementById('m-btn').href='mailto:indrajprajapat@://gmail.com;">📩 </button>
+    <div id="otp-div" style="display:none;margin-top:10px">
+      <p id="otp-show" style="color:#15803d;font-weight:bold;font-size:.9rem"></p>
+      <div style="display:flex;gap:6px;margin:6px 0">
+        <a id="m-btn" href="#" target="_blank" class="btn btn-sm" style="background:#2563eb;flex:1;text-align:center">📧 Gmail</a>
+        <a id="w-btn" href="#" target="_blank" class="btn btn-sm" style="background:#16a34a;flex:1;text-align:center">💬 WhatsApp</a>
+      </div>
+      <label>6-अंकों का कोड:</label><textarea id="in-otp" rows="1"></textarea>
+      <label>नया Admin ID:</label><textarea id="n-id" rows="1"></textarea>
+      <label>नया Password:</label><textarea id="n-pw" rows="1"></textarea>
+      <button type="button" class="btn" style="width:100%" onclick="var c=document.getElementById('in-otp').value.trim(),ni=document.getElementById('n-id').value.trim(),np=document.getElementById('n-pw').value.trim();if(c===window.otpCode && ni && np){localStorage.setItem('f_aid',ni);localStorage.setItem('f_apw',np);alert('नया ID और Password सेव हो गया!');document.getElementById('fgt-box').style.display='none';document.getElementById('login-box').style.display='flex';}else{alert('गलत कोड या खाली बॉक्स!');}">✅ सेव करें</button>
+    </div>
+    <button type="button" class="btn" style="background:#64748b;width:100%;margin-top:8px" onclick="document.getElementById('fgt-box').style.display='none'">बंद करें</button>
+  </div>
+</div>
+
+<div class="mdl" id="adm">
+  <div class="box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <h3>🎛️ Admin Dashboard</h3>
+      <button type="button" class="btn btn-sm" style="background:#dc2626" onclick="document.getElementById('adm').style.display='none'">✖ बंद करें</button>
+    </div>
+    
+    <!-- Direct Inline Tabs -->
+    <div class="tbar">
+      <button type="button" class="tbtn act" onclick="document.getElementById('t1').style.display='block';document.getElementById('t2').style.display='none';document.getElementById('t3').style.display='none';">✅ Approvals (<span id="pcnt">0</span>)</button>
+      <button type="button" class="tbtn" onclick="document.getElementById('t1').style.display='none';document.getElementById('t2').style.display='block';document.getElementById('t3').style.display='none';">📢 Admin Notice</button>
+      <button type="button" class="tbtn" onclick="document.getElementById('t1').style.display='none';document.getElementById('t2').style.display='none';document.getElementById('t3').style.display='block';">⚙️ Profile & Rates</button>
+      <button type="button" class="tbtn" onclick="showTab('t4',this)">📦 Packages Media</button>
+
+    </div>
+
+    <div id="t1" style="display:block">
+      <h4 style="margin-bottom:6px">📸 Pending Customer Photos / Videos:</h4>
+      <div id="pm-list"><p style="font-size:.85rem;color:#64748b">अभी कोई पेंडिंग फाइल नहीं है।</p></div>
+      <hr style="margin:12px 0">
+      <h4 style="margin-bottom:6px">🎵 Pending DJ Remix Songs:</h4>
+      <div id="ps-list"><p style="font-size:.85rem;color:#64748b">अभी कोई पेंडिंग गाना नहीं है।</p></div>
+    </div>
+
+    <div id="t2" style="display:none">
+      <label>ग्राहकों के लिए मुख्य सूचना / ऑफर लिखें:</label>
+      <textarea id="i-not" rows="3">📢 Fouji DJ Events Ratangarh: शादी और इवेंट्स की एडवांस बुकिंग के लिए संपर्क करें! विशेष पैकेज पर आकर्षक छूट उपलब्ध।</textarea>
+      <button type="button" class="btn" onclick="document.getElementById('notice-txt').innerText=document.getElementById('i-not').value;alert('सूचना वेबसाइट पर अपडेट हो गई है!');">📢 सूचना पब्लिश करें</button>
+    </div>
+
+    <div id="t3" style="display:none">
+      <label>कॉलिंग नंबर:</label><textarea id="i-call" rows="1">7023370739, 9119276526, 7725930617, 9001181847</textarea>
+      <label>व्हाट्सएप नंबर:</label><textarea id="i-wa" rows="1">9001181847</textarea>
+      <label>ईमेल ID:</label><textarea id="i-mail" rows="1">Foujidjeventsratangarh@gmail.com</textarea>
+      <label>पता:</label><textarea id="i-addr" rows="1">Fouji DJ Ratangarh, Churu, Rajasthan</textarea>
+      <label>Instagram IDs:</label><textarea id="i-ins" rows="2">@fouji_dj_events_ratangarh, @fouji_dj_ratangarh_, @fouji_floor_dj_ratangarh</textarea>
+      <label>पैकेज 1 (नाम / रेट / जानकारी):</label><textarea id="i-p1n" rows="1">Normal U Truss</textarea><textarea id="i-p1r" rows="1">Basic</textarea><textarea id="i-p1d" rows="2">Single Side Truss, टॉप स्पीकर, बेस स्पीकर, डांस फ्लोर, बेसिक लाइटिंग।</textarea>
+      <label>पैकेज 2 (नाम / रेट / जानकारी):</label><textarea id="i-p2n" rows="1">Four Side Normal</textarea><textarea id="i-p2r" rows="1">Premium</textarea><textarea id="i-p2d" rows="2">Four Side Truss, डांस फ्लोर, टॉप स्पीकर, बेस स्पीकर, शार्पी लाइट्स।</textarea>
+      <label>पैकेज 3 (नाम / रेट / जानकारी):</label><textarea id="i-p3n" rows="1">Four Side Truss</textarea><textarea id="i-p3r" rows="1">Royal Wedding</textarea><textarea id="i-p3d" rows="2">बड़ा डांस फ्लोर, लाइन अरे साउंड, LED Wall, कोल्ड पायरो, CO2 Jet।</textarea>
+      <button type="button" class="btn" onclick="saveAll()">✅ सभी बदलाव सेव करें</button>
+    <div id="t4" style="display:none">
+      <h4 style="margin-bottom:8px">📦 पैकेज के अंदर Photo / Video अपलोड करें:</h4>
+      <label>किस पैकेज में जोड़ना है?</label>
+      <select id="sel-pkg" style="width:100%;padding:8px;margin:4px 0 10px;border:1px solid #94a3b8;border-radius:5px">
+        <option value="p1">1. Normal U Truss (Basic)</option>
+        <option value="p2">2. Four Side Normal (Premium)</option>
+        <option value="p3">3. Four Side Truss (Royal Wedding)</option>
+        <option value="p4">4. Pickup DJ (Road Show & Barat)</option>
+      </select>
+      <label>गैलरी से Photo या Video चुनें:</label>
+      <input type="file" id="pkg-file-inp" accept="image/*,video/*" multiple style="margin:6px 0 12px;width:100%">
+      <button type="button" class="btn" style="background:#16a34a;width:100%" onclick="uploadPkgMedia()">📤 चुने गए पैकेज में अपलोड करें</button>
+      
+      <hr style="margin:15px 0">
+      <label>Pickup DJ का नाम / टैग / जानकारी बदलें:</label>
+      <textarea id="i-p4n" rows="1">Pickup DJ</textarea>
+      <textarea id="i-p4r" rows="1">Road Show & Barat</textarea>
+      <textarea id="i-p4d" rows="2">बारात, जुलूस और शोभायात्रा के लिए हैवी बेस, टॉप स्पीकर, जनरेटर, पावरफुल लाइटिंग और फुल Pickup DJ सेटअप।</textarea>
+      <button type="button" class="btn" onclick="savePkg4()">Pickup DJ की जानकारी सेव करें</button>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+var wn="919001181847",pMedia=[],pSongs=[];
+function mk(id,c){var e=document.getElementById(id);if(!e)return;var t=e.innerText;e.innerHTML="";for(var i=0;i<t.length;i++){var s=document.createElement("span");if(t.charAt(i)===" ")s.innerHTML="&nbsp;&nbsp;";else{s.innerText=t.charAt(i);s.className=c;s.style.animationDelay=(i*.12)+"s"}e.appendChild(s)}}
+mk("lw","gl");mk("hw","hl");
+
+function upCustMedia(){
+  var cn=document.getElementById("cm-name").value.trim()||"Customer";
+  var f=document.createElement("input");f.type="file";f.accept="image/*,video/*";
+  f.onchange=function(e){var fl=e.target.files.item(0);if(!fl)return;pMedia.push({n:cn,u:URL.createObjectURL(fl),v:fl.type.indexOf("video")===0});document.getElementById("pcnt").innerText=pMedia.length+pSongs.length;document.getElementById("cm-msg").innerText="✅ Admin Approval के लिए भेज दिया गया!";document.getElementById("cm-name").value="";};
+  f.click();
+}
+function upSong(){
+  var st=document.getElementById("s-ttl").value.trim(),rm=document.getElementById("s-rmx").value.trim();
+  if(!st||!rm){alert("गाने का नाम और Remixer का नाम लिखें!");return;}
+  var f=document.createElement("input");f.type="file";f.accept="audio/*";
+  f.onchange=function(e){var fl=e.target.files.item(0);if(!fl)return;pSongs.push({t:st,r:rm,u:URL.createObjectURL(fl)});document.getElementById("pcnt").innerText=pMedia.length+pSongs.length;document.getElementById("s-msg").innerText="✅ गाना Approval के लिए भेज दिया गया!";document.getElementById("s-ttl").value="";document.getElementById("s-rmx").value="";};
+  f.click();
+}
+function renderPend(){
+  var pm=document.getElementById("pm-list");pm.innerHTML=pMedia.length?"":"<p style='font-size:.85rem;color:#64748b'>अभी कोई पेंडिंग फाइल नहीं है।</p>";
+  pMedia.forEach(function(m,i){pm.innerHTML+="<div class='pitem'><p><b>By:</b> "+m.n+"</p><button type='button' class='btn btn-sm' style='background:#16a34a' onclick='appM("+i+")'>✅ Accept</button> <button type='button' class='btn btn-sm' style='background:#dc2626' onclick='decM("+i+")'>❌ Decline</button></div>";});
+<script>
+function filterAlbum(alb) {
+  var items = document.querySelectorAll('#gal .g-item');
+  for (var i = 0; i < items.length; i++) {
+    var itemAlb = items[i].getAttribute('data-album');
+    items[i].style.display = (alb === 'All' || itemAlb === alb) ? 'block' : 'none';
+  }
+}
+
+function filterPlaylist(pl) {
+  var songs = document.querySelectorAll('#song-list .scard');
+  for (var i = 0; i < songs.length; i++) {
+    var songPl = songs[i].getAttribute('data-playlist');
+    songs[i].style.display = (pl === 'All' || songPl === pl) ? 'block' : 'none';
+  }
+}
+
+function appM(i) {
+  var list = window.pMedia || pMedia;
+  var m = list[i];
+  if (!m) return;
+  var alb = m.a || 'Wedding Events';
+  var g = document.getElementById("gal");
+  g.innerHTML += m.v 
+    ? "<div class='g-item' data-album='" + alb + "'><video src='" + m.u + "' controls></video><div class='g-cap'>By: " + m.n + " [" + alb + "]</div></div>" 
+    : "<div class='g-item' data-album='" + alb + "'><img src='" + m.u + "'><div class='g-cap'>By: " + m.n + " [" + alb + "]</div></div>";
+  list.splice(i, 1);
+  document.getElementById("pcnt").innerText = list.length + (window.pSongs ? window.pSongs.length : 0);
+  renderPend();
+}
+
+function appS(i) {
+  var list = window.pSongs || pSongs;
+  var s = list[i];
+  if (!s) return;
+  var pl = s.p || 'Rajasthani DJ Mix';
+  var cleanFileName = s.t.replace(/[^a-zA-Z0-9_-]/g, '_') + ".mp3";
+  document.getElementById("song-list").innerHTML += 
+    "<div class='scard' data-playlist='" + pl + "'>" +
+      "<div style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'>" +
+        "<div>" +
+          "<strong style='color:#fde047;font-size:1.05rem'>🎵 " + s.t + "</strong>" +
+          "<p style='font-size:.85rem;color:#94a3b8'>Remixer: " + s.r + " | Playlist: <b style='color:#38bdf8'>" + pl + "</b></p>" +
+        "</div>" +
+        "<a href='" + s.u + "' download='" + cleanFileName + "' class='btn btn-sm' style='background:#16a34a;margin-top:0'>⬇️ Download MP3</a>" +
+      "</div>" +
+      "<audio controls src='" + s.u + "'></audio>" +
+    "</div>";
+  list.splice(i, 1);
+  document.getElementById("pcnt").innerText = (window.pMedia ? window.pMedia.length : 0) + list.length;
+  renderPend();
+}
+</script>
+<script>
+function saveAll() {
+  try {
+    var callEl = document.getElementById("i-call");
+    if (callEl && document.getElementById("c-call")) {
+      var cv = callEl.value.trim();
+      document.getElementById("c-call").innerText = cv;
+      var fn = cv.split(",").shift().replace(/[^0-9]/g, "");
+      if (fn && document.getElementById("cbtn")) {
+        document.getElementById("cbtn").href = "tel:+91" + fn;
+        document.getElementById("cbtn").innerText = "अभी कॉल करें (" + fn + ")";
+      }
+    }
+
+    var waEl = document.getElementById("i-wa");
+    if (waEl && document.getElementById("c-wa")) {
+      var w = waEl.value.replace(/[^0-9]/g, "");
+      window.wn = (w.length === 10) ? ("91" + w) : w;
+      document.getElementById("c-wa").innerText = w;
+    }
+
+    var mailEl = document.getElementById("i-mail");
+    if (mailEl && document.getElementById("c-mail")) {
+      document.getElementById("c-mail").innerText = mailEl.value.trim();
+    }
+
+    var addrEl = document.getElementById("i-addr");
+    if (addrEl && document.getElementById("c-addr")) {
+      document.getElementById("c-addr").innerText = addrEl.value.trim();
+    }
+
+    var insEl = document.getElementById("i-ins");
+    var ib = document.getElementById("ibox");
+    if (insEl && ib) {
+      ib.innerHTML = "";
+      insEl.value.split(",").forEach(function(x) {
+        var c = x.trim();
+        if (c) {
+          var d = c.charAt(0) === "@" ? c : "@" + c;
+          ib.innerHTML += "<a class='ins' href='https://instagram.com" + c.replace("@", "") + "' target='_blank'>📸 " + d + "</a>";
+        }
+      });
+    }
+
+    ["p1", "p2", "p3"].forEach(function(p) {
+      var nEl = document.getElementById("i-" + p + "n");
+      var rEl = document.getElementById("i-" + p + "r");
+      var dEl = document.getElementById("i-" + p + "d");
+      if (nEl && document.getElementById(p + "-n")) document.getElementById(p + "-n").innerText = nEl.value.trim();
+      if (rEl && document.getElementById(p + "-r")) document.getElementById(p + "-r").innerText = rEl.value.trim();
+      if (dEl && document.getElementById(p + "-d")) document.getElementById(p + "-d").innerText = dEl.value.trim();
+    });
+
+    alert("✅ सभी बदलाव सफलतापूर्वक सेव हो गए हैं!");
+    document.getElementById("adm").style.display = "none";
+  } catch (err) {
+    alert("Error: " + err.message);
+  }
+}
+</script>
+<script>
+window.pkgMedia = {
+  p1: [
+    { v: false, u: "https://unsplash.com", cap: "Normal U Truss Setup" }
+  ],
+  p2: [
+    { v: false, u: "https://unsplash.com", cap: "Four Side Normal Lights" }
+  ],
+  p3: [
+    { v: false, u: "https://unsplash.com", cap: "Royal Wedding Truss & LED" }
+  ],
+  p4: [
+    { v: false, u: "https://unsplash.com", cap: "Heavy Pickup DJ Sound" }
+  ]
+};
+
+function openPkgDetails(pk) {
+  var title = document.getElementById(pk + "-n").innerText + " (" + document.getElementById(pk + "-r").innerText + ")";
+  var desc = document.getElementById(pk + "-d").innerText;
+  document.getElementById("pm-title").innerText = title;
+  document.getElementById("pm-desc").innerText = desc;
+  
+  var galBox = document.getElementById("pm-gallery");
+  galBox.innerHTML = "";
+  var list = window.pkgMedia[pk] || [];
+  
+  if (list.length === 0) {
+    galBox.innerHTML = "<p style='color:#64748b'>अभी इस पैकेज में कोई फोटो या वीडियो नहीं डाली गई है।</p>";
+  } else {
+    for (var i = 0; i < list.length; i++) {
+      var item = list[i];
+      if (item.v) {
+        galBox.innerHTML += "<div class='g-item'><video src='" + item.u + "' controls style='width:100%;height:170px;object-fit:cover'></video><div class='g-cap'>" + item.cap + "</div></div>";
+      } else {
+        galBox.innerHTML += "<div class='g-item'><img src='" + item.u + "' style='width:100%;height:170px;object-fit:cover'><div class='g-cap'>" + item.cap + "</div></div>";
+      }
+    }
+  }
+  
+  document.getElementById("pm-book-btn").onclick = function() { wa(pk); };
+  document.getElementById("pkg-modal").style.display = "flex";
+}
+
+function uploadPkgMedia() {
+  var pk = document.getElementById("sel-pkg").value;
+  var inp = document.getElementById("pkg-file-inp");
+  if (!inp || !inp.files || inp.files.length === 0) {
+    alert("कृपया पहले Choose File दबाकर कोई Photo या Video चुनें!");
+    return;
+  }
+  window.pkgMedia[pk] = window.pkgMedia[pk] || [];
+  for (var i = 0; i < inp.files.length; i++) {
+    var fl = inp.files.item(i);
+    window.pkgMedia[pk].push({
+      v: fl.type.indexOf("video") === 0,
+      u: URL.createObjectURL(fl),
+      cap: fl.name
+    });
+  }
+  inp.value = "";
+  alert("✅ चुनी गई फोटो/वीडियो इस पैकेज के 'More Details' में जोड़ दी गई हैं!");
+}
+
+function savePkg4() {
+  document.getElementById("p4-n").innerText = document.getElementById("i-p4n").value.trim();
+  document.getElementById("p4-r").innerText = document.getElementById("i-p4r").value.trim();
+  document.getElementById("p4-d").innerText = document.getElementById("i-p4d").value.trim();
+  alert("✅ Pickup DJ की जानकारी अपडेट हो गई है!");
+}
+
+// Override showTab to support 4 tabs including t4
+function showTab(tid, b) {
+  ["t1", "t2", "t3", "t4"].forEach(function(x) {
+    var el = document.getElementById(x);
+    if (el) el.style.display = "none";
+  });
+  var target = document.getElementById(tid);
+  if (target) target.style.display = "block";
+  document.querySelectorAll(".tbtn").forEach(function(x) { x.classList.remove("act"); });
+  if (b) b.classList.add("act");
+}
+</script>
+<script>
+// Master Repair Script: Activates All Buttons, WhatsApp, Tabs, Reviews & Popups
+(function() {
+  window.wn = window.wn || "919001181847";
+
+  // 1. Activate All WhatsApp Booking & Chat Buttons
+  window.wa = function(k) {
+    var msg = "";
+    if (k === 'gen') {
+      msg = "नमस्ते Fouji DJ Events Ratangarh, मुझे DJ और डांस फ्लोर बुकिंग की जानकारी चाहिए।";
+    } else {
+      var nameEl = document.getElementById(k + "-n");
+      var rateEl = document.getElementById(k + "-r");
+      var pName = nameEl ? nameEl.innerText : "DJ Package";
+      var pRate = rateEl ? rateEl.innerText : "";
+      msg = "नमस्ते Fouji DJ Events Ratangarh, मुझे *" + pName + "* (" + pRate + ") की बुकिंग और रेट के बारे में जानकारी चाहिए।";
+    }
+    window.open("https://wa.me" + window.wn + "?text=" + encodeURIComponent(msg), "_blank");
+  };
+
+  // 2. Activate All 4 Admin Dashboard Tabs
+  window.showTab = function(tid, b) {
+    var tabs = ["t1", "t2", "t3", "t4"];
+    for (var i = 0; i < tabs.length; i++) {
+      var el = document.getElementById(tabs[i]);
+      if (el) el.style.display = "none";
+    }
+    var activeTab = document.getElementById(tid);
+    if (activeTab) activeTab.style.display = "block";
+    
+    var btns = document.querySelectorAll(".tbtn");
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.remove("act");
+    }
+    if (b) b.classList.add("act");
+  };
+
+  // 3. Activate Customer Review & Comment Buttons
+  window.addRev = function() {
+    var n = document.getElementById("r-name").value.trim();
+    var st = document.getElementById("r-star").value;
+    var tx = document.getElementById("r-txt").value.trim();
+    if (!n || !tx) {
+      alert("कृपया अपना नाम और रिव्यू दोनों लिखें!");
+      return;
+    }
+    var revList = document.getElementById("rev-list");
+    if (revList) {
+      revList.innerHTML = "<div class='rcard'><div style='display:flex;justify-content:space-between'><strong style='color:#fde047'>" + n + "</strong><span style='color:#facc15'>" + st + "</span></div><p style='margin-top:6px;color:#e2e8f0'>" + tx + "</p><div style='margin-top:10px'><button type='button' class='lbtn' onclick=\"var s=this.querySelector('span');s.innerText=parseInt(s.innerText)+1\">❤️ Like (<span>1</span>)</button><button type='button' class='lbtn' onclick='addCmt(this)'>💬 Comment</button></div><div class='clist'></div></div>" + revList.innerHTML;
+    }
+    document.getElementById("r-name").value = "";
+    document.getElementById("r-txt").value = "";
+    alert("✅ आपका रिव्यू पोस्ट हो गया है!");
+  };
+
+  window.addCmt = function(b) {
+    var c = prompt("अपना कमेंट लिखें:");
+    if (c && c.trim() && b && b.parentElement && b.parentElement.nextElementSibling) {
+      b.parentElement.nextElementSibling.innerHTML += "<div style='margin-top:5px'><b>User:</b> " + c.trim() + "</div>";
+    }
+  };
+
+  // 4. Ensure Pending Lists Render Properly
+  window.renderPend = function() {
+    var pmList = document.getElementById("pm-list");
+    var mArr = window.pMedia || [];
+    if (pmList) {
+      pmList.innerHTML = mArr.length ? "" : "<p style='font-size:.85rem;color:#64748b'>अभी कोई पेंडिंग फाइल नहीं है।</p>";
+      for (var i = 0; i < mArr.length; i++) {
+        pmList.innerHTML += "<div class='pitem'><p><b>By:</b> " + mArr[i].n + " (" + (mArr[i].a || "Gallery") + ")</p><button type='button' class='btn btn-sm' style='background:#16a34a' onclick='appM(" + i + ")'>✅ Accept</button> <button type='button' class='btn btn-sm' style='background:#dc2626' onclick='decM(" + i + ")'>❌ Decline</button></div>";
+      }
+    }
+
+    var psList = document.getElementById("ps-list");
+    var sArr = window.pSongs || [];
+    if (psList) {
+      psList.innerHTML = sArr.length ? "" : "<p style='font-size:.85rem;color:#64748b'>अभी कोई पेंडिंग गाना नहीं है।</p>";
+      for (var j = 0; j < sArr.length; j++) {
+        psList.innerHTML += "<div class='pitem'><p><b>Song:</b> " + sArr[j].t + " (" + sArr[j].r + ")</p><button type='button' class='btn btn-sm' style='background:#16a34a' onclick='appS(" + j + ")'>✅ Accept</button> <button type='button' class='btn btn-sm' style='background:#dc2626' onclick='decS(" + j + ")'>❌ Decline</button></div>";
+      }
+    }
+  };
+
+  window.decM = function(i) {
+    if (window.pMedia) {
+      window.pMedia.splice(i, 1);
+      var c = document.getElementById("pcnt");
+      if (c) c.innerText = window.pMedia.length + (window.pSongs ? window.pSongs.length : 0);
+      window.renderPend();
+    }
+  };
+
+  window.decS = function(i) {
+    if (window.pSongs) {
+      window.pSongs.splice(i, 1);
+      var c = document.getElementById("pcnt");
+      if (c) c.innerText = (window.pMedia ? window.pMedia.length : 0) + window.pSongs.length;
+      window.renderPend();
+    }
+  };
+})();
+</script>
+<!-- Album Card Click Viewer Modal -->
+<div class="mdl" id="alb-viewer">
+  <div class="box" style="max-width:650px">
+    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e2e8f0;padding-bottom:8px;margin-bottom:12px">
+      <h3 id="av-title" style="color:#0f172a">Album View</h3>
+      <button type="button" class="btn btn-sm" style="background:#dc2626;margin-top:0" onclick="document.getElementById('alb-viewer').style.display='none'">✖ बंद करें</button>
+    </div>
+    <div id="av-content" style="text-align:center"></div>
+  </div>
+</div>
+
+<script>
+// Make all Gallery & Album Cards Clickable
+(function() {
+  function enableGalleryClicks() {
+    var cards = document.querySelectorAll('#gal .g-item');
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.cursor = "pointer";
+      cards[i].title = "देखने के लिए क्लिक करें";
+      cards[i].onclick = function() {
+        var capEl = this.querySelector('.g-cap');
+        var title = capEl ? capEl.innerText : "Fouji DJ Event Gallery";
+        document.getElementById('av-title').innerText = title;
+        
+        var contentBox = document.getElementById('av-content');
+        var img = this.querySelector('img');
+        var vid = this.querySelector('video');
+        var svg = this.querySelector('svg');
+        
+        if (vid) {
+          contentBox.innerHTML = "<video src='" + vid.src + "' controls autoplay style='width:100%;max-height:420px;border-radius:8px;background:#000'></video>";
+        } else if (img) {
+          contentBox.innerHTML = "<img src='" + img.src + "' style='width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#0f172a'>";
+        } else if (svg) {
+          var cloneSvg = svg.cloneNode(true);
+          cloneSvg.style.height = "300px";
+          cloneSvg.style.background = "#090d16";
+          cloneSvg.style.borderRadius = "8px";
+          contentBox.innerHTML = "";
+          contentBox.appendChild(cloneSvg);
+          contentBox.innerHTML += "<p style='margin-top:10px;color:#334155;font-weight:bold'>इस एल्बम में अपनी असली फोटो/वीडियो डालने के लिए नीचे दिए गए 'ग्राहक फोटो / वीडियो अपलोड' या 'Admin Dashboard' का उपयोग करें।</p>";
+        }
+        document.getElementById('alb-viewer').style.display = 'flex';
+      };
+    }
+  }
+
+  enableGalleryClicks();
+  // Re-apply click events whenever new photos/videos are approved
+  var oldAppM = window.appM;
+  window.appM = function(i) {
+    if (typeof oldAppM === 'function') oldAppM(i);
+    setTimeout(enableGalleryClicks, 100);
+  };
+})();
+</script>
+<script>
+(function() {
+  function cleanAlbumViewer() {
+    var cards = document.querySelectorAll('#gal .g-item');
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].onclick = function() {
+        var capEl = this.querySelector('.g-cap');
+        var title = capEl ? capEl.innerText : "Fouji DJ Event Gallery";
+        document.getElementById('av-title').innerText = title;
+        
+        var contentBox = document.getElementById('av-content');
+        var img = this.querySelector('img');
+        var vid = this.querySelector('video');
+        var svg = this.querySelector('svg');
+        
+        if (vid) {
+          contentBox.innerHTML = "<video src='" + vid.src + "' controls autoplay style='width:100%;max-height:420px;border-radius:8px;background:#000'></video>";
+        } else if (img) {
+          contentBox.innerHTML = "<img src='" + img.src + "' style='width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#0f172a'>";
+        } else if (svg) {
+          var cloneSvg = svg.cloneNode(true);
+          cloneSvg.style.height = "300px";
+          cloneSvg.style.background = "#090d16";
+          cloneSvg.style.borderRadius = "8px";
+          contentBox.innerHTML = "";
+          contentBox.appendChild(cloneSvg);
+        }
+        document.getElementById('alb-viewer').style.display = 'flex';
+      };
+    }
+  }
+  cleanAlbumViewer();
+  var prevAppM = window.appM;
+  window.appM = function(i) {
+    if (typeof prevAppM === 'function') prevAppM(i);
+    setTimeout(cleanAlbumViewer, 100);
+  };
+})();
+</script>
+<script>
+(function() {
+  // 1. Add sample tracks for Bollywood Remix & Bass Boosted so every button shows songs
+  var songList = document.getElementById('song-list');
+  if (songList && songList.children.length <= 1) {
+    songList.innerHTML += 
+      "<div class='scard' data-playlist='Bollywood Remix'>" +
+        "<div style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'>" +
+          "<div>" +
+            "<strong style='color:#fde047;font-size:1.05rem'>💃 Bollywood Wedding Party Mashup</strong>" +
+            "<p style='font-size:.85rem;color:#94a3b8'>Remixer: Fouji DJ Ratangarh | Playlist: <b style='color:#38bdf8'>Bollywood Remix</b></p>" +
+          "</div>" +
+          "<a href='https://soundhelix.com' download='Bollywood_Wedding_Mashup.mp3' target='_blank' class='btn btn-sm' style='background:#16a34a;margin-top:0'>⬇️ Download MP3</a>" +
+        "</div>" +
+        "<audio controls src='https://soundhelix.com'></audio>" +
+      "</div>" +
+      "<div class='scard' data-playlist='Bass Boosted'>" +
+        "<div style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px'>" +
+          "<div>" +
+            "<strong style='color:#fde047;font-size:1.05rem'>🔊 Hard Vibration Bass Check Mix</strong>" +
+            "<p style='font-size:.85rem;color:#94a3b8'>Remixer: Fouji DJ Ratangarh | Playlist: <b style='color:#38bdf8'>Bass Boosted</b></p>" +
+          "</div>" +
+          "<a href='https://soundhelix.com' download='Hard_Vibration_Bass_Mix.mp3' target='_blank' class='btn btn-sm' style='background:#16a34a;margin-top:0'>⬇️ Download MP3</a>" +
+        "</div>" +
+        "<audio controls src='https://soundhelix.com'></audio>" +
+      "</div>";
+  }
+
+  // 2. Activate All Playlist Filter Buttons with Active Color Highlight
+  window.filterPlaylist = function(pl) {
+    var songs = document.querySelectorAll('#song-list .scard');
+    var found = 0;
+    for (var i = 0; i < songs.length; i++) {
+      var songPl = songs[i].getAttribute('data-playlist');
+      if (pl === 'All' || songPl === pl) {
+        songs[i].style.display = 'block';
+        found++;
+      } else {
+        songs[i].style.display = 'none';
+      }
+    }
+
+    // Highlight the clicked playlist button in bright green
+    var btns = document.querySelectorAll('#songs button');
+    for (var j = 0; j < btns.length; j++) {
+      var oc = btns[j].getAttribute('onclick') || '';
+      if (oc.indexOf('filterPlaylist') !== -1) {
+        if (oc.indexOf("'" + pl + "'") !== -1) {
+          btns[j].style.background = '#22c55e';
+          btns[j].style.color = '#0f172a';
+        } else {
+          btns[j].style.background = '#1e293b';
+          btns[j].style.color = '#ffffff';
+        }
+      }
+    }
+  };
+
+  // Also activate Album Filter Buttons with Active Color Highlight
+  window.filterAlbum = function(alb) {
+    var items = document.querySelectorAll('#gal .g-item');
+    for (var i = 0; i < items.length; i++) {
+      var itemAlb = items[i].getAttribute('data-album');
+      items[i].style.display = (alb === 'All' || itemAlb === alb) ? 'block' : 'none';
+    }
+    var btns = document.querySelectorAll('#gallery button');
+    for (var j = 0; j < btns.length; j++) {
+      var oc = btns[j].getAttribute('onclick') || '';
+      if (oc.indexOf('filterAlbum') !== -1) {
+        if (oc.indexOf("'" + alb + "'") !== -1) {
+          btns[j].style.background = '#FF9933';
+          btns[j].style.color = '#0f172a';
+        } else {
+          btns[j].style.background = '#1e293b';
+          btns[j].style.color = '#ffffff';
+        }
+      }
+    }
+  };
+})();
+</script>
+<!-- Stylish Royal Font & Enhanced Look for Brand Name -->
+<link href="https://googleapis.com" rel="stylesheet">
+<style>
+  #lw .gl {
+    font-family: 'Cinzel Decorative', Georgia, serif !important;
+    font-size: 1.75rem !important;
+    letter-spacing: 1.5px !important;
+    text-shadow: 0 3px 12px rgba(250, 204, 21, 0.65) !important;
+  }
+  #hw .hl {
+    font-family: 'Cinzel Decorative', Georgia, serif !important;
+    font-size: 2.55rem !important;
+    letter-spacing: 2px !important;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.85));
+  }
+  @media (max-width: 650px) {
+    #lw .gl { font-size: 1.35rem !important; letter-spacing: 1px !important; }
+    #hw .hl { font-size: 1.75rem !important; letter-spacing: 1px !important; }
+  }
+</style>
+<style>
+  /* Royal Stylish 3D Look for Top Corner & Hero Name (Works Offline & Online) */
+  #lw, #lw span {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 900 !important;
+    font-size: 1.95rem !important;
+    letter-spacing: 2px !important;
+    color: #fde047 !important;
+    text-shadow: 0 2px 0 #b45309, 0 4px 12px rgba(253, 224, 71, 0.8) !important;
+  }
+
+  #hw, #hw span {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 900 !important;
+    font-size: 2.85rem !important;
+    letter-spacing: 2.5px !important;
+    background: linear-gradient(180deg, #FF9933 0%, #FF9933 35%, #FFFFFF 35%, #FFFFFF 65%, #22c55e 65%, #16a34a 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 3px 0px #000000) drop-shadow(0 6px 15px rgba(255, 153, 51, 0.5)) !important;
+  }
+
+  @media (max-width: 650px) {
+    #lw, #lw span { font-size: 1.4rem !important; letter-spacing: 1px !important; }
+    #hw, #hw span { font-size: 1.85rem !important; letter-spacing: 1px !important; }
+  }
+</style>
+<style>
+  /* Full-Page Night Stage Show, Truss Lighting & Dancing Crowd Background */
+  body {
+    background-color: #050811 !important;
+    background-image: 
+      linear-gradient(rgba(6, 9, 19, 0.72), rgba(6, 9, 19, 0.80)),
+      url('https://unsplash.com') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+  }
+
+  /* Make Hero & Sections Slightly Transparent so Stage Crowd & Lights Shine Through */
+  .hero {
+    background: linear-gradient(180deg, rgba(11, 17, 32, 0.45) 0%, rgba(11, 17, 32, 0.65) 100%) !important;
+  }
+  .card, .panel, .scard, .rcard, .cnt {
+    background: rgba(15, 23, 42, 0.84) !important;
+    backdrop-filter: blur(6px);
+  }
+</style>
+
+<!-- Built-in Stage Truss, Laser Lights & Party Crowd Graphic (Always Visible Even Offline) -->
+<svg viewBox="0 0 1440 500" preserveAspectRatio="none" style="position:fixed;bottom:0;left:0;width:100%;height:75vh;z-index:-1;pointer-events:none;opacity:0.55">
+  <defs>
+    <radialGradient id="stageGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#ec4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#050811" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="500" fill="url(#stageGlow)"/>
+  
+  <!-- Top Truss & Spotlights -->
+  <rect x="120" y="20" width="1200" height="14" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="280,34 40,500 520,500" fill="#FF9933" opacity="0.25"/>
+  <polygon points="720,34 440,500 1000,500" fill="#38bdf8" opacity="0.28"/>
+  <polygon points="1160,34 920,500 1400,500" fill="#22c55e" opacity="0.25"/>
+  <polygon points="500,34 250,500 750,500" fill="#ec4899" opacity="0.20"/>
+  <polygon points="940,34 690,500 1190,500" fill="#fde047" opacity="0.20"/>
+
+  <!-- Dancing Party Crowd Silhouettes with Raised Hands at Bottom -->
+  <path d="M0,500 L0,430 Q30,410 50,435 L65,390 L75,430 Q100,400 130,430 L150,380 L165,430 Q200,405 230,435 L250,385 L265,430 Q300,400 340,435 L360,375 L375,430 Q410,405 450,435 L470,385 L485,430 Q520,400 560,435 L580,370 L595,430 Q630,405 670,435 L690,380 L705,430 Q740,400 780,435 L800,375 L815,430 Q850,405 890,435 L910,385 L925,430 Q960,400 1000,435 L1020,375 L1035,430 Q1070,405 1110,435 L1130,385 L1145,430 Q1180,400 1220,435 L1240,380 L1255,430 Q1290,405 1330,435 L1350,385 L1365,430 Q1400,410 1440,435 L1440,500 Z" fill="#03050a"/>
+</svg>
+<style>
+  /* Remove the extra bottom truss rectangle line */
+  svg[viewBox="0 0 1440 500"] rect[y="20"] {
+    display: none !important;
+  }
+</style>
+<script>
+(function() {
+  // 1. Add "Staff & VIP" Tab Button to Admin Dashboard automatically
+  var tbar = document.querySelector('#adm .tbar');
+  var admBox = document.querySelector('#adm .box');
+  
+  if (tbar && admBox && !document.getElementById('t5')) {
+    var tabBtn = document.createElement('button');
+    tabBtn.type = 'button';
+    tabBtn.className = 'tbtn';
+    tabBtn.innerText = '📇 Operators & VIP (Private)';
+    tabBtn.onclick = function() {
+      if (typeof window.showTab === 'function') window.showTab('t5', this);
+    };
+    tbar.appendChild(tabBtn);
+
+    // 2. Create Private Tab Content (t5) inside Admin Dashboard
+    var t5Div = document.createElement('div');
+    t5Div.id = 't5';
+    t5Div.style.display = 'none';
+    t5Div.innerHTML = 
+      '<div style="background:#fefce8;border:1px solid #fde047;padding:8px 12px;border-radius:6px;margin-bottom:10px">' +
+        '<p style="font-size:0.82rem;color:#854d0e;font-weight:bold">🔒 यह लिस्ट केवल Admin के लिए है। ग्राहकों को वेबसाइट पर नहीं दिखेगी।</p>' +
+      '</div>' +
+      '<label>नाम (Operator / VIP Name):</label>' +
+      '<textarea id="vip-name" rows="1" placeholder="जैसे: Suresh Ji (Main Operator)"></textarea>' +
+      '<label>काम / पद (Role):</label>' +
+      '<textarea id="vip-role" rows="1" placeholder="जैसे: Sound & Truss Operator / VIP"></textarea>' +
+      '<label>मोबाइल नंबर (Mobile Number):</label>' +
+      '<textarea id="vip-num" rows="1" placeholder="जैसे: 98290XXXXX"></textarea>' +
+      '<button type="button" class="btn" style="background:#16a34a;width:100%;margin-bottom:14px" onclick="addVipContact()">➕ लिस्ट में जोड़ें और सेव करें</button>' +
+      '<h4 style="color:#0f172a;margin-bottom:8px;border-top:1px solid #e2e8f0;padding-top:10px">📋 सेव किए गए Operators और खास लोग:</h4>' +
+      '<div id="vip-list-box"></div>';
+    admBox.appendChild(t5Div);
+  }
+
+  // 3. Load & Save Private Contacts in Browser Storage
+  window.vipContacts = JSON.parse(localStorage.getItem('f_private_vip') || '[]');
+  if (window.vipContacts.length === 0) {
+    window.vipContacts = [
+      { name: "Main Sound Operator", role: "DJ & Line Array", num: "7023370739" },
+      { name: "Truss & Lighting Head", role: "Four Side Truss", num: "9119276526" }
+    ];
+    localStorage.setItem('f_private_vip', JSON.stringify(window.vipContacts));
+  }
+
+  window.renderVipList = function() {
+    var box = document.getElementById('vip-list-box');
+    if (!box) return;
+    if (window.vipContacts.length === 0) {
+      box.innerHTML = '<p style="font-size:0.85rem;color:#64748b">अभी कोई नंबर सेव नहीं है।</p>';
+      return;
+    }
+    box.innerHTML = '';
+    for (var i = 0; i < window.vipContacts.length; i++) {
+      var item = window.vipContacts[i];
+      box.innerHTML += 
+        '<div class="pitem" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">' +
+          '<div>' +
+            '<strong style="color:#0f172a;font-size:0.95rem">' + item.name + '</strong> ' +
+            '<span style="background:#e2e8f0;color:#334155;padding:2px 8px;border-radius:10px;font-size:0.75rem">' + item.role + '</span>' +
+            '<p style="font-size:0.9rem;color:#15803d;font-weight:bold;margin-top:2px">📞 ' + item.num + '</p>' +
+          '</div>' +
+          '<div>' +
+            '<a href="tel:' + item.num + '" class="btn btn-sm" style="background:#2563eb;margin-top:0">📞 Call</a> ' +
+            '<button type="button" class="btn btn-sm" style="background:#dc2626;margin-top:0" onclick="delVipContact(' + i + ')">🗑️</button>' +
+          '</div>' +
+        '</div>';
+    }
+  };
+
+  window.addVipContact = function() {
+    var n = document.getElementById('vip-name').value.trim();
+    var r = document.getElementById('vip-role').value.trim() || 'Operator / VIP';
+    var m = document.getElementById('vip-num').value.trim();
+    if (!n || !m) {
+      alert('कृपया नाम और मोबाइल नंबर दोनों लिखें!');
+      return;
+    }
+    window.vipContacts.push({ name: n, role: r, num: m });
+    localStorage.setItem('f_private_vip', JSON.stringify(window.vipContacts));
+    document.getElementById('vip-name').value = '';
+    document.getElementById('vip-role').value = '';
+    document.getElementById('vip-num').value = '';
+    window.renderVipList();
+    alert('✅ नंबर आपकी प्राइवेट लिस्ट में सेव हो गया है!');
+  };
+
+  window.delVipContact = function(idx) {
+    if (confirm('क्या आप इस नंबर को लिस्ट से हटाना चाहते हैं?')) {
+      window.vipContacts.splice(idx, 1);
+      localStorage.setItem('f_private_vip', JSON.stringify(window.vipContacts));
+      window.renderVipList();
+    }
+  };
+
+  // Update showTab so clicking t5 works smoothly
+  var oldShowTab = window.showTab;
+  window.showTab = function(tid, b) {
+    ['t1', 't2', 't3', 't4', 't5'].forEach(function(x) {
+      var el = document.getElementById(x);
+      if (el) el.style.display = 'none';
+    });
+    var target = document.getElementById(tid);
+    if (target) target.style.display = 'block';
+    document.querySelectorAll('.tbtn').forEach(function(x) { x.classList.remove('act'); });
+    if (b) b.classList.add('act');
+    if (tid === 't5') window.renderVipList();
+  };
+
+  window.renderVipList();
+})();
+</script>
+<script>
+(function() {
+  if (document.getElementById('top-sacred-banner')) return;
+
+  var banner = document.createElement('div');
+  banner.id = 'top-sacred-banner';
+  banner.style.cssText = 'background:linear-gradient(90deg, rgba(255,153,51,0.18) 0%, rgba(15,23,42,0.95) 50%, rgba(19,136,8,0.18) 100%);border-bottom:3px solid #fde047;padding:12px 4%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;text-align:center;';
+
+  banner.innerHTML = 
+    // Left Side: Farming Kisan (जय किसान)
+    '<div style="flex:1;min-width:130px;display:flex;flex-direction:column;align-items:center">' +
+      '<div style="width:74px;height:74px;border-radius:50%;background:radial-gradient(circle,#fef08a,#d97706);padding:3px;box-shadow:0 0 15px rgba(255,153,51,0.6)">' +
+        '<svg viewBox="0 0 100 100" style="width:100%;height:100%;border-radius:50%;background:#1e293b">' +
+          '<circle cx="50" cy="50" r="48" fill="#451a03"/>' +
+          // Sun & Crops
+          '<circle cx="72" cy="28" r="10" fill="#fde047"/>' +
+          '<path d="M10,82 Q50,70 90,82 L90,98 L10,98 Z" fill="#15803d"/>' +
+          '<path d="M20,80 L22,68 M30,78 L32,66 M70,78 L68,66 M80,80 L78,68" stroke="#86efac" stroke-width="2.5"/>' +
+          // Farmer with Turban & Plough/Hal
+          '<circle cx="48" cy="36" r="9" fill="#fed7aa"/>' +
+          '<path d="M38,34 Q48,22 58,34 Z" fill="#FF9933"/>' +
+          '<path d="M38,68 L42,46 L54,46 L58,68 Z" fill="#f8fafc"/>' +
+          '<line x1="30" y1="54" x2="68" y2="76" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round"/>' +
+          '<path d="M64,76 L74,76 L68,84 Z" fill="#94a3b8"/>' +
+        '</svg>' +
+      '</div>' +
+      '<span style="color:#fdba74;font-weight:bold;font-size:0.85rem;margin-top:5px">🌾 जय किसान (अन्नदाता)</span>' +
+    '</div>' +
+
+    // Center: Shree Ganesh Ji (बीच में श्री गणेश जी)
+    '<div style="flex:1.2;min-width:160px;display:flex;flex-direction:column;align-items:center">' +
+      '<div style="width:86px;height:86px;border-radius:50%;background:radial-gradient(circle,#fde047,#ea580c);padding:3px;box-shadow:0 0 22px rgba(253,224,71,0.8)">' +
+        '<svg viewBox="0 0 100 100" style="width:100%;height:100%;border-radius:50%;background:#450a0a">' +
+          // Aura Ring
+          '<circle cx="50" cy="50" r="42" fill="none" stroke="#fde047" stroke-width="1.5" stroke-dasharray="4 3"/>' +
+          // Mukut (Crown)
+          '<polygon points="36,28 50,10 64,28" fill="#fbbf24"/>' +
+          '<circle cx="50" cy="22" r="3" fill="#dc2626"/>' +
+          // Ears
+          '<ellipse cx="28" cy="44" rx="10" ry="14" fill="#fb923c"/>' +
+          '<ellipse cx="72" cy="44" rx="10" ry="14" fill="#fb923c"/>' +
+          // Face & Tilak
+          '<circle cx="50" cy="44" r="16" fill="#fdba74"/>' +
+          '<path d="M47,33 L47,39 M53,33 L53,39 M50,34 L50,40" stroke="#dc2626" stroke-width="2"/>' +
+          // Trunk (Sond)
+          '<path d="M46,48 Q45,66 36,68 Q32,68 33,63" fill="none" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/>' +
+          // Body & Dhoti
+          '<path d="M32,84 Q50,62 68,84 Z" fill="#FF9933"/>' +
+          '<path d="M36,64 Q50,74 64,64" fill="none" stroke="#fde047" stroke-width="2.5"/>' +
+        '</svg>' +
+      '</div>' +
+      '<span style="color:#fde047;font-weight:900;font-size:0.95rem;margin-top:5px;letter-spacing:0.5px">॥ श्री गणेशाय नमः ॥</span>' +
+    '</div>' +
+
+    // Right Side: Indian Army Jawan (जय जवान)
+    '<div style="flex:1;min-width:130px;display:flex;flex-direction:column;align-items:center">' +
+      '<div style="width:74px;height:74px;border-radius:50%;background:radial-gradient(circle,#86efac,#15803d);padding:3px;box-shadow:0 0 15px rgba(34,197,94,0.6)">' +
+        '<svg viewBox="0 0 100 100" style="width:100%;height:100%;border-radius:50%;background:#064e3b">' +
+          // Tiranga Backdrop
+          '<rect x="10" y="18" width="80" height="8" fill="#FF9933" opacity="0.7"/>' +
+          '<rect x="10" y="26" width="80" height="8" fill="#FFFFFF" opacity="0.7"/>' +
+          '<rect x="10" y="34" width="80" height="8" fill="#138808" opacity="0.7"/>' +
+          // Army Soldier Helmet & Face
+          '<path d="M36,38 Q50,22 64,38 Z" fill="#166534" stroke="#fde047" stroke-width="1.5"/>' +
+          '<circle cx="50" cy="44" r="9" fill="#fed7aa"/>' +
+          // Army Uniform & Salute Arm
+          '<path d="M32,84 L38,54 L62,54 L68,84 Z" fill="#15803d"/>' +
+          '<path d="M60,56 L74,44 L62,38" fill="none" stroke="#15803d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>' +
+          // Rifle / Guard Silhouette
+          '<line x1="34" y1="45" x2="34" y2="85" stroke="#0f172a" stroke-width="4"/>' +
+        '</svg>' +
+      '</div>' +
+      '<span style="color:#86efac;font-weight:bold;font-size:0.85rem;margin-top:5px">🇮🇳 जय जवान (फौजी)</span>' +
+    '</div>';
+
+  // Insert right below the top notice banner (before the Hero section)
+  var heroEl = document.querySelector('.hero');
+  if (heroEl && heroEl.parentNode) {
+    heroEl.parentNode.insertBefore(banner, heroEl);
+  }
+})();
+</script>
+
+
