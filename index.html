@@ -1265,5 +1265,227 @@ function showTab(tid, b) {
   }
 })();
 </script>
+<!-- ALL 5 UPDATES: 3D Cloth Flag, Realistic Kisan/Ganesh/Army Photos, DJ Musician Crowd BG, New Card Admin Dashboard + Password Change + Logout -->
+<style>
+  /* 5. Full-Page Night DJ Lighting, Musician & Dancing Crowd Background */
+  body {
+    background-color: #050811 !important;
+    background-image: 
+      linear-gradient(rgba(6, 9, 19, 0.72), rgba(6, 9, 19, 0.82)),
+      url('https://unsplash.com') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+  }
+
+  /* 3. Realistic 3D Cloth Waving Tiranga Flag */
+  .flag {
+    width: 76px !important;
+    height: 46px !important;
+    perspective: 600px !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.7) !important;
+    border-radius: 0 3px 3px 0 !important;
+    overflow: hidden !important;
+  }
+  .flag .s {
+    position: relative !important;
+    animation: cloth3DWave 2.2s ease-in-out infinite !important;
+  }
+  .flag .s::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.22), rgba(255,255,255,0.28), rgba(0,0,0,0.18));
+    animation: clothLightShade 2.2s ease-in-out infinite;
+  }
+  @keyframes cloth3DWave {
+    0%, 100% { transform: translateY(0px) skewY(0deg) scaleY(1); }
+    25% { transform: translateY(-3px) skewY(7deg) scaleY(1.03); }
+    50% { transform: translateY(0px) skewY(0deg) scaleY(1); }
+    75% { transform: translateY(3px) skewY(-7deg) scaleY(0.97); }
+  }
+  @keyframes clothLightShade {
+    0%, 100% { opacity: 0.2; }
+    25% { opacity: 0.85; }
+    50% { opacity: 0.2; }
+    75% { opacity: 0.75; }
+  }
+
+  /* 4. New Modern Card-Based Admin Dashboard Styling */
+  .adm-grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .adm-menu-card {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #f8fafc;
+    padding: 16px 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #334155;
+    transition: 0.25s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .adm-menu-card:hover, .adm-menu-card.selected {
+    border-color: #FF9933;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    transform: translateY(-3px);
+  }
+  .adm-menu-card span {
+    font-size: 1.7rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .adm-menu-card b {
+    font-size: 0.85rem;
+    display: block;
+    color: #fde047;
+  }
+  .adm-panel-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    animation: fadeInBox 0.25s ease-in-out;
+  }
+  @keyframes fadeInBox {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+(function() {
+  // Enhance Tiranga Flag to 12 realistic cloth strips
+  var flagBox = document.querySelector('.flag');
+  if (flagBox) {
+    flagBox.innerHTML = '';
+    for (var i = 0; i < 12; i++) {
+      var st = document.createElement('div');
+      st.className = 's';
+      st.style.animationDelay = (-1.2 + i * 0.11) + 's';
+      flagBox.appendChild(st);
+    }
+    var chk = document.createElement('span');
+    chk.className = 'chk';
+    chk.innerText = '☸';
+    flagBox.appendChild(chk);
+  }
+
+  // 2. Replace Top Banner with Realistic Photos of Hal Jotta Kisan, Ganesh Ji & Indian Army Jawan
+  var topBanner = document.getElementById('top-sacred-banner');
+  if (!topBanner) {
+    topBanner = document.createElement('div');
+    topBanner.id = 'top-sacred-banner';
+    var heroEl = document.querySelector('.hero');
+    if (heroEl && heroEl.parentNode) heroEl.parentNode.insertBefore(topBanner, heroEl);
+  }
+  topBanner.style.cssText = 'background:linear-gradient(90deg, rgba(255,153,51,0.22) 0%, rgba(11,17,32,0.92) 50%, rgba(19,136,8,0.22) 100%);border-bottom:3px solid #fde047;padding:14px 4%;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:14px;text-align:center;';
+  topBanner.innerHTML = 
+    // Left: Realistic Hal Jotta Kisan
+    '<div style="flex:1;min-width:130px;display:flex;flex-direction:column;align-items:center">' +
+      '<img src="https://unsplash.com" alt="Kisan Hal Jotte Huye" style="width:82px;height:82px;border-radius:50%;object-fit:cover;border:3px solid #FF9933;box-shadow:0 0 16px rgba(255,153,51,0.7)">' +
+      '<span style="color:#fdba74;font-weight:bold;font-size:0.88rem;margin-top:6px">🌾 जय किसान (अन्नदाता)</span>' +
+    '</div>' +
+
+    // Center: Realistic Shree Ganesh Ji
+    '<div style="flex:1.2;min-width:150px;display:flex;flex-direction:column;align-items:center">' +
+      '<img src="https://unsplash.com" alt="Shree Ganesh Ji" style="width:94px;height:94px;border-radius:50%;object-fit:cover;border:3px solid #fde047;box-shadow:0 0 22px rgba(253,224,71,0.85)">' +
+      '<span style="color:#fde047;font-weight:900;font-size:0.95rem;margin-top:6px">॥ श्री गणेशाय नमः ॥</span>' +
+    '</div>' +
+
+    // Right: Realistic Indian Army Jawan
+    '<div style="flex:1;min-width:130px;display:flex;flex-direction:column;align-items:center">' +
+      '<img src="https://unsplash.com" alt="Indian Army Jawan" style="width:82px;height:82px;border-radius:50%;object-fit:cover;border:3px solid #22c55e;box-shadow:0 0 16px rgba(34,197,94,0.7)">' +
+      '<span style="color:#86efac;font-weight:bold;font-size:0.88rem;margin-top:6px">🇮🇳 जय जवान (फौजी)</span>' +
+    '</div>';
+
+  // 1 & 4. Upgrade Admin Portal into Modern Card-Based Dashboard with Logout & Password Change
+  var admBox = document.querySelector('#adm .box');
+  if (admBox) {
+    admBox.style.maxWidth = '640px';
+    admBox.style.background = '#ffffff';
+
+    // Replace top bar with Logout button and Card Grid Navigation
+    var oldHeader = admBox.firstElementChild;
+    if (oldHeader) {
+      oldHeader.innerHTML = 
+        '<h3 style="color:#0f172a;font-size:1.2rem">🎛️ Fouji DJ Admin Control Center</h3>' +
+        '<div>' +
+          '<button type="button" class="btn btn-sm" style="background:#dc2626;margin-top:0;margin-right:6px" onclick="adminLogoutNow()">🚪 Logout</button>' +
+          '<button type="button" class="btn btn-sm" style="background:#64748b;margin-top:0" onclick="document.getElementById(\'adm\').style.display=\'none\'">✖</button>' +
+        '</div>';
+    }
+
+    var oldTbar = admBox.querySelector('.tbar');
+    if (oldTbar) {
+      oldTbar.className = 'adm-grid-menu';
+      oldTbar.innerHTML = 
+        '<div class="adm-menu-card selected" onclick="openAdminSection(\'t1\', this)"><span>✅</span><b>Approvals (<i id="pcnt2" style="font-style:normal">0</i>)</b></div>' +
+        '<div class="adm-menu-card" onclick="openAdminSection(\'t2\', this)"><span>📢</span><b>Admin Notice</b></div>' +
+        '<div class="adm-menu-card" onclick="openAdminSection(\'t3\', this)"><span>⚙️</span><b>Profile & Rates</b></div>' +
+        '<div class="adm-menu-card" onclick="openAdminSection(\'t4\', this)"><span>📦</span><b>Packages Media</b></div>' +
+        '<div class="adm-menu-card" onclick="openAdminSection(\'t5\', this)"><span>📇</span><b>Operators & VIP</b></div>' +
+        '<div class="adm-menu-card" onclick="openAdminSection(\'t6\', this)"><span>🔐</span><b>Password Change</b></div>';
+    }
+
+    // Add t6 (Password Change Box) if not already created
+    if (!document.getElementById('t6')) {
+      var t6 = document.createElement('div');
+      t6.id = 't6';
+      t6.style.display = 'none';
+      t6.innerHTML = 
+        '<h4 style="color:#0f172a;margin-bottom:10px">🔐 Admin ID और Password बदलें:</h4>' +
+        '<label>नया Admin ID लिखें:</label>' +
+        '<textarea id="new-adm-id" rows="1" placeholder="नया ID लिखें (जैसे: foujiadmin)"></textarea>' +
+        '<label>नया Password लिखें:</label>' +
+        '<textarea id="new-adm-pw" rows="1" placeholder="नया Password लिखें"></textarea>' +
+        '<button type="button" class="btn" style="background:#16a34a;width:100%;margin-top:10px" onclick="saveNewAdminPass()">✅ नया ID और Password सेव करें</button>';
+      admBox.appendChild(t6);
+    }
+
+    // Style all section panels cleanly
+    ['t1', 't2', 't3', 't4', 't5', 't6'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.className = 'adm-panel-box';
+    });
+  }
+
+  window.openAdminSection = function(secId, cardEl) {
+    ['t1', 't2', 't3', 't4', 't5', 't6'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
+    var target = document.getElementById(secId);
+    if (target) target.style.display = 'block';
+
+    var cards = document.querySelectorAll('.adm-menu-card');
+    for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+    if (cardEl) cardEl.classList.add('selected');
+
+    if (secId === 't1' && typeof window.renderPend === 'function') window.renderPend();
+    if (secId === 't5' && typeof window.renderVipList === 'function') window.renderVipList();
+  };
+
+  window.saveNewAdminPass = function() {
+    var nid = document.getElementById('new-adm-id').value.trim();
+    var npw = document.getElementById('new-adm-pw').value.trim();
+    if (!nid || !npw) {
+      alert('कृपया नया Admin ID और नया Password दोनों लिखें!');
+      return;
+    }
+    localStorage.setItem('f_aid', nid);
+    localStorage.setItem('f_apw', npw);
+    alert('✅ आपका Admin ID और Password सफलतापूर्वक बदल गया है! अब नए ID/Password से दोबारा लॉगिन करें।');
+    document.getElementById('new-adm-id').value = '';
+    document.getElementById('new-adm-pw').value = '';
+    window.adminLogoutNow();
+  };
+
+  window.adminLogoutNow = function() {
+    document.getElementById('adm').style.display = 'none';
 
 
